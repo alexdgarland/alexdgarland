@@ -4,7 +4,7 @@ I'm Alex, currently a Senior Staff Engineer at Shopify - but that's not the main
 
 I take some degree of pride in not being a "typical" programmer and having the "arts and humanities" part of my brain firing pretty well alongside the bit that can do algorithms, architecture and formal logic.
 
-My degree was in Philosophy - I did some Psychology as well in my first year, which means I'm pretty interested in what makes people "tick" (and also mildly skeptical of the Myers-Briggs Type Indicator - no judgement if you find it useful, but there are definitely more scientifically-validated and precise ways of looking at human personality if you feel the need). I also find History and Economics fascinating.
+My degree was in Philosophy - I did some Psychology as well in my first year, which means I'm pretty interested in what makes people "tick" (and also mildly skeptical of the Myers-Briggs Type Indicator - no judgement if you find it useful, but there are definitely more scientifically-validated and precise ways of looking at human personality if you feel the need). More recently, I've found big areas of History and Economics quite fascinating.
 
 I spent a lot of my time at university and a few years afterward digging into the Hip-Hop scene in Leeds, West Yorkshire, trying to see how far I could get as a DJ and music journalist - it turns out not that far (!) but it was an interesting experience and I learnt a lot along the way.
 
