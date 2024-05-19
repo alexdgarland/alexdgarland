@@ -6,6 +6,8 @@ It's pretty common to boil a book down to one idea or at least a simplified vers
 
 _In case the obvious needs stating - I encourage you to go and actually-buy and actually-read any of the below that sound interesting..._
 
+Also - disclaimer - at least for the first draft(s) of this post, I haven't re-read any of the books in question - even though they are on a shelf in full view from where I'm typing this - but am going on memory, which is partly the point in terms of what has made a lasting impression and honestly, partly laziness! As this post may very well have zero readers I think that's fine, but I may revisit them and update in future.
+
 So:
 
 ## Camille Fournier - The Manager's Path
@@ -26,7 +28,7 @@ For further reading that is management-related but still with a distinct tech fl
 
 Okay so we are temporarily hitting a bit of a theme here - again, let's lean into it...
 
-This book was fairly explicitly intended as a follow-on/ companion-piece to The Manager's Path for those not choosing to go into management. Symptomatic of an _excellent_ recent trend to actually start looking at what the higher levels of the "Technical Track" look like in companies sufficiently large/ tech-focused for it to be An Actual Thing - Will Larsons's "Staff Engineer" (all the key parts of which can be read for free at [staffeng.com](https://staffeng.com/)) also covers similar ground, and is very solid but for didn't have one specific impactful moment.
+This book was fairly explicitly intended as a follow-on/ companion-piece to The Manager's Path for those not choosing to go into management. Symptomatic of an _excellent_ recent trend to actually start looking at what the higher levels of the "Technical Track" look like in companies sufficiently large/ tech-focused for it to be An Actual Thing - Will Larsons's "Staff Engineer" (all the key parts of which can be read for free at [staffeng.com](https://staffeng.com/)) also covers similar ground, and is very solid but for me didn't have one specific impactful moment.
 
 This book though  - Reilly's - is really good, although less life-changing for me than Fournier's. The thing that has stayed with me is **very** simple and concise:
 
@@ -40,13 +42,21 @@ It's incredibly tempting on a human level to hide behind vague statements that n
 
 I can't tell you how often I have found this a useful mantra to push myself to do the right thing in the last few years.
 
-## Chris Date - SQL & Relational Theory
-
-TODO - expand on "this book is hard going and the author is very opinionated, but it really opened me up to the idea that even something as useful and widely-adopted as SQL doesn't necessarily align super-well with the foundations of underlying theory, and that understanding the theory can give one a much more widely applicable set of mental tools than just memorising syntax".
-
 ## Fred Brooks - No Silver Bullet
 
-TODO - expand on "This is who Brooks was. The obvious choice would be The Mythical Man Month, but actually I found this essay (not even a book) was the thing that most resonated with me. Even within the scope of the essay, I think I can split this out to things that are kind of debatable (the precise claims about what advance can be made - even in the face of developments pre-2020-ish it's wobbly, and Gen AI is another big chunk of potential improvement once it gets over the hype curve) from the really helpful distinction between Essential Complecity vs Accidental Complexity which is just endlessly useful in analyzing technical problems". Technical complexity of the solution should always scale relative to some reasonable definition of Essential Complexity - not chase Accidental Complexity through over-engineering/ tech trends.
+And now we're definitely breaking the pattern in that this isn't even a book - rather it's a paper.
+
+For those who don't know, Fred Brooks worked at IBM in the mid-20th-Cenury and is by far best known for his 1975 book "The Mythical Man Month". That book is excellent and does in fact have One Key Lesson (adding software engineers to a project can actually slow it down, because it increases commmunication and coordination costs), but is so well dug over already that I don't think I need to say much more on it.
+
+The just-slightly-more-hipster choice, and a genuine unironic favourite of mine though, is ["No Silver Bullet — Essence and Accident in Software Engineering"](https://worrydream.com/refs/Brooks_1986_-_No_Silver_Bullet.pdf), which Brooks wrote in the '80s.
+
+The exact claims about what productivity improvements are possible from what sources are probably debatable - the text itself specifically refers to not getting an "order of magnitude" improvement in productivity from a single source "within a decade". Since then, we've had many, many years of improvement in languages, tooling and people from DORA telling us how to measure stuff, and obviously everyone is currently getting very excited about Generative AI. It's all a bit hard to align to specific claims and I'm not particularly bothered to try.
+
+The more abstract and more useful thing that I frequently revisit though is the distinction between complexity that is "Essential" - an irreducible part of the problem you need to solve - and "Accidental" - a factor of the tools, processes etc that you use to try and create that solution. The latter type of complexity you should try and resolve out through better tooling, better design etc - the former you can handle better or worse (basically, create more or less "noise" and accidental complexity around it), but as implied by it being _Essential_, you can't get rid of it in any meaningful way.
+
+This concept continues to be very useful to me - a good lens for design review of others' work, or planning one's own, is to get as clear as picture as possible of what the essential complexity of a problem is. Similar to [Amdahl's Law](https://en.wikipedia.org/wiki/Amdahl%27s_law), it should give a strong intuition of what the maximum improvement you can expect is - removing all the parts which don't address the core complexity which the whole value of your work is in addressing.
+
+The essential complexity **can** be business logic and the accidental parts technical, but it's definitely possible to view it on multiple levels - for example if you _essentially_ need to scale processing across different units of infrastructure to take the required load, certain nasty distributed-systems problems become part of the essential complexity - even if you lean on an existing component to handle some of the dist-sys implementation you still need to understand the specific failure states of the system, whereas rolling that component from scratch yourself or using a poorly-designed client library would add accidental complexity. Conversely, if you are distributing your workload to preemptively add scalability for workloads you may never actually have to support - dist-sys implementation problems are firmly in the Accidental class and you should do something basic and monolithic at least to start with.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
